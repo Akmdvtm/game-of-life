@@ -1,9 +1,8 @@
-import {Htag, P, Tag} from "../components";
-import {Button} from "../components";
+import {Button, Htag, P, Rating, Tag} from "../components";
 import {useEffect, useState} from "react";
-import {Rating} from "../components/Rating/Rating";
+import {withLayout} from "../layout/Layout";
 
-export default function Home(): JSX.Element {
+function Home(): JSX.Element {
     const [counter, setCounter] = useState<number>(0);
 
     useEffect(() => {
@@ -29,3 +28,5 @@ export default function Home(): JSX.Element {
         </>
     );
 }
+
+export default withLayout(Home);
